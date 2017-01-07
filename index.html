@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="animate.css">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script src="logic.js"></script>
+  <title>Picture Verse</title>
+</head>
+
+<body>
+  <!-- <div id = "navDiv">
+    <input onclick='responsiveVoice.speak("你想什麼時候去?", "Chinese Female");' type='button' value='🔊 Play' />
+    <h1 id = "nameHeader" class="animated fadeInDown" onclick='animateElement("nameHeader","animated hinge")'>Jessica Rachmat & Joseph Lee</h1>
+    <div style = "margin:0 auto; width: 440px" >
+      <ul id = "navList" class="animated fadeInUpBig">
+          <li><a href="#heart"><img class="navIcon" src="http://iconshow.me/media/images/ui/ios7-icons/png/512/heart-outline.png" height="49" width="49"></a></li>
+          <li><a href="#school"><img class="navIcon" src="http://www.billwaldropdaylilies.com/image/10timg/b/2/a_img/e692ebcac6ae3f901a98a6b260466cfc" height="49" width="49"></a></li>
+          <li><a href="#home"><img class="navIcon" src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-18-128.png" height="38" width="38"></a></li>
+      </ul>
+   </div>
+  </div> -->
+  <div id = "imageDiv" class="animated fadeIn">
+    <div id = "verseDiv" class="animated fadeIn"></div>
+    <div id = "referenceDiv" class="animated fadeIn"></div>
+  </div>
+  <script>
+  function myfunction(data){
+      // var verse = data[0].text.replace('<a style="" target="_blank" href="http://bible.org/page.php?page_id=3537">&copy;NET</a>', '');
+      var verse = data[0].text.split(".")[0];
+      var reference = data[0].bookname + " " + data[0].chapter + ":" + data[0].verse;
+      console.log(data[0]);
+
+      document.getElementById("verseDiv").innerHTML = verse;
+      document.getElementById("referenceDiv").innerHTML =  reference;
+
+  }
+  </script>
+  <script type="text/javascript" src="http://labs.bible.org/api/?passage=random&type=json&callback=myfunction"></script>
+</body>
+
+</html>
