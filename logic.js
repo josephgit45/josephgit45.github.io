@@ -1,13 +1,4 @@
-// $(document).ready(function() {
-//     var response = '';
-//     $.ajax({ type: "GET",
-//              url: "http://labs.bible.org/api/?passage=random&type=json&callback=myfunction",
-//              async: false,
-//              dataType: 'jsonp',
-//              success : function(text)
-//              {
-//                  response = text;
-//              }
-//     });
-//     console.log(response);
-//  });
+$(document).ready(function() {
+    console.log('url("https://unsplash.it/' + screen.width  + '/' + screen.height + '/?random"');
+    document.getElementById("imageDiv").style.backgroundImage = 'url("https://unsplash.it/' + screen.width  + '/' + screen.height + '/?random"';
+ });

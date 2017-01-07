@@ -4,7 +4,7 @@ body{
   font-family: 'Quicksand', sans-serif;
 }
 div#imageDiv{
-  background-image: url("https://unsplash.it/1400/670/?random");
+  /*background-image: url("https://unsplash.it/1400/670/?random");*/
   padding: 0px;
   margin: 0px;
   width: 100%;
@@ -15,6 +15,7 @@ div#imageDiv{
 div#verseDiv{
   font-size: 50px;
   padding: 30px;
+  padding-left: 40px;
   padding-top: 55px;
   color: white;
 }
