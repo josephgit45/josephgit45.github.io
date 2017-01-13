@@ -4,8 +4,8 @@ $(document).ready(function() {
  });
 
  function playVideo(){
-   var videoFrameHTML = '<iframe onclick = "window.reload()" class = "videoFrame" scrolling="no" frameborder="0" style="pointer-events: none;" src="https://www.youtube.com/embed/QeY8lndPsdE?rel=0&amp?version=3&autoplay=1&controls=0&modestbranding=1&showinfo=0&loop=1​"></iframe>';
-   var musicFrameHTML1 = '<iframe frameborder="0" style="pointer-events: none;" src="https://www.youtube.com/embed/osgbIChguVQ?rel=0?version=3&start=273&autoplay=1&controls=0&modestbranding=1&showinfo=0&loop=1​&playlist=osgbIChguVQ" width="0" height="0"></iframe>';
+   var videoFrameHTML = '<iframe class = "videoFrame" scrolling="no" frameborder="0" style="pointer-events: none;" src="https://www.youtube.com/embed/QeY8lndPsdE?rel=0&amp?version=3&autoplay=1&controls=0&modestbranding=1&showinfo=0&loop=1​"></iframe>';
+   var musicFrameHTML1 = '<iframe frameborder="0" style="pointer-events: none;" src="https://www.youtube.com/embed/osgbIChguVQ?rel=0?version=3&autoplay=1&controls=0&modestbranding=1&showinfo=0&loop=1​" width="0" height="0"></iframe>';
    var musicFrameHTML2 = '<iframe frameborder="0" style="pointer-events: none;" src="https://www.youtube.com/embed/9IGDAKBJMtU?rel=0?version=3&autoplay=1&controls=0&modestbranding=1&showinfo=0&loop=1​" width="0" height="0"></iframe>';
 
    document.getElementById("imageDiv").style.backgroundImage = '';
@@ -17,20 +17,11 @@ $(document).ready(function() {
      setTimeout(function(){
        document.getElementById("imageDiv").style.visibility = "visible";
      }, 4000);
-   }, 7500);
-
-   setTimeout(function(){
-      location.reload();
-   }, 430000);
-
-   setTimeout(function(){
-      showVerses(2);
-   }, 405000);
-
-   showVerses(1);
+   }, 7000);
+   showVerses();
  }
 
- function showVerses(input){
+ function showVerses(){
    verseArray = [
      "But we have this treasure in jars of clay",
      "to show that the surpassing power belongs to God and not to us.",
@@ -52,25 +43,17 @@ $(document).ready(function() {
      "So we do not lose heart.",
      "Though our outer self is wasting away",
      "our inner self is being renewed day by day.",
-     "For this light momentary affliction is preparing for us",
-     "an eternal weight of glory beyond all comparison",
-     "as we look not to the things that are seen - but to the things that are unseen.",
+     "For this light momentary affliction is preparing for us an eternal weight of glory beyond all comparison",
+     "as we look not to the things that are seen but to the things that are unseen.",
      "For the things that are seen are transient, but the things that are unseen are eternal."
     ];
-    if (input == 1){
-      var index = 15;
-      var max = 18;
-    }else if (input == 2){
-      var index = 18;
-      var max = verseArray.length;
-    }
-
+   var index = 15;
    document.getElementById("verseDiv").innerHTML = "";
    document.getElementById("referenceDiv").innerHTML = "";
 
    setInterval(function(){
      setTimeout(function(){
-       if (index < max){
+       if (index < 18){
          document.getElementById("verseDiv").innerHTML = '<p class="animated fadeIn presetVerse">' + verseArray[index++] + "</p>";
        }
        else{
