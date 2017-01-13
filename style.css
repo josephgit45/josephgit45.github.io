@@ -2,21 +2,29 @@ body{
   padding: 0px;
   margin: 0px;
   font-family: 'Quicksand', sans-serif;
+  overflow:hidden;
+  background-color: black;
 }
+
+iframe.videoFrame{
+   width: 150%;
+   height:110%;
+}
+
 div#imageDiv{
   /*background-image: url("https://unsplash.it/1400/670/?random");*/
   padding: 0px;
   margin: 0px;
   width: 100%;
   height: 100%;
-  opacity: .1;
 }
 
 div#verseDiv{
+  position: fixed;
+  top: 30;
+  left: 35;
   font-size: 50px;
   padding: 30px;
-  padding-left: 40px;
-  padding-top: 55px;
   color: white;
 }
 
@@ -26,4 +34,24 @@ div#referenceDiv{
   position: fixed;
   bottom: 30;
   right: 35;
+}
+
+p.presetVerse{
+  position: fixed;
+  top: 30;
+  left: 35;
+  padding: 0px;
+  margin: 0px;
+}
+
+div#musicDiv{
+  visibility: hidden;
+}
+
+div#videoDiv{
+  opacity: 0;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
 }

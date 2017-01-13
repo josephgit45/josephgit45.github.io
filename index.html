@@ -14,10 +14,12 @@
 </head>
 
 <body>
-  <div id = "imageDiv" class="animated fadeIn">
-    <div id = "verseDiv" class="animated fadeIn"></div>
-    <div id = "referenceDiv" class="animated fadeIn" onclick = 'outloud()'></div>
-  </div>
+  <div id = "imageDiv" class="animated fadeIn" onclick="playVideo()"></div>
+  <div id = "videoDiv"></div>
+  <div id = "musicDiv" class="animated fadeIn"></div>
+
+  <div id = "verseDiv" class="animated fadeIn"></div>
+  <div id = "referenceDiv" class="animated fadeIn" onclick = 'outloud()'></div>
   <script>
   var currentVerse = "";
   function outloud(){
