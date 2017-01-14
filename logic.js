@@ -25,7 +25,7 @@ $(document).ready(function() {
 
    setTimeout(function(){
       showVerses(2);
-   }, 405000);
+   }, 400000);
 
    showVerses(1);
  }
@@ -54,8 +54,8 @@ $(document).ready(function() {
      "our inner self is being renewed day by day.",
      "For this light momentary affliction is preparing for us",
      "an eternal weight of glory beyond all comparison",
-     "as we look not to the things that are seen - but to the things that are unseen.",
-     "For the things that are seen are transient, but the things that are unseen are eternal."
+     "as we look not to the things that are seen",
+     "but to the things that are unseen."
     ];
     if (input == 1){
       var index = 15;
