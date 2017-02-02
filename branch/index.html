@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="animate.css">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+
+  <script src="logic.js"></script>
+  <title>Branch Picture Verse</title>
+</head>
+
+<body>
+  <div id = "imageDiv" class="animated fadeIn" onclick="playVideo()"></div>
+  <div id = "videoDiv"></div>
+  <div id = "musicDiv" class="animated fadeIn"></div>
+
+  <div id = "verseDiv" class="animated fadeIn"></div>
+  <div id = "referenceDiv" class="animated fadeIn" onclick = 'outloud()'></div>
+  <script>
+  var currentVerse = "";
+  function outloud(){
+    responsiveVoice.speak(currentVerse, "Vietnamese Male", {pitch: .75, rate:1.2, volume:.7});
+    // var voicelist = responsiveVoice.getVoices();
+    // for (i in voicelist){
+    //   console.log(voicelist[i]);
+    // }
+  }
+  function parseVerse(data){
+      // var verse = data[0].text.replace('<a style="" target="_blank" href="http://bible.org/page.php?page_id=3537">&copy;NET</a>', '');
+      var verse = data[0].text.split(".")[0];
+      var reference = data[0].bookname + " " + data[0].chapter + ":" + data[0].verse;
+      console.log(data[0]);
+      currentVerse = verse;
+      document.getElementById("verseDiv").innerHTML = verse;
+      document.getElementById("referenceDiv").innerHTML =  reference;
+  }
+  </script>
+  <script type="text/javascript" src="http://labs.bible.org/api/?passage=random&type=json&callback=parseVerse"></script>
+</body>
+
+</html>
