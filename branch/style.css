@@ -1,0 +1,68 @@
+body{
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Quicksand', sans-serif;
+  overflow:hidden;
+  background-color: white;
+}
+
+iframe.videoFrame{
+   width: 150%;
+   height:110%;
+}
+
+div#loadingScreen{
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+img#ripple{
+  position: absolute;
+  top: 0; bottom:0; left: 0; right:0;
+  margin: auto;
+}
+
+div#imageDiv{
+  /*background-image: url("https://unsplash.it/1400/670/?random");*/
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+div#verseDiv{
+  position: fixed;
+  top: 30;
+  left: 35;
+  font-size: 50px;
+  padding: 30px;
+  color: white;
+}
+
+div#referenceDiv{
+  font-size: 50px;
+  color: white;
+  position: fixed;
+  bottom: 30;
+  right: 35;
+}
+
+p.presetVerse{
+  position: fixed;
+  top: 30;
+  left: 35;
+  padding: 0px;
+  margin: 0px;
+}
+
+div#musicDiv{
+  visibility: hidden;
+}
+
+div#videoDiv{
+  opacity: 0;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
