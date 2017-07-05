@@ -1,0 +1,22 @@
+body{
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Quicksand', sans-serif;
+  overflow:hidden;
+  background-color: black;
+}
+
+#videoPlayer{
+   width: 150%;
+   height:110%;
+}
+
+p.presetVerse{
+  position: fixed;
+  top: 30;
+  left: 35;
+  font-size: 53px;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+}

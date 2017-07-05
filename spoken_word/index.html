@@ -1,0 +1,25 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="animate.css">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script src="logic.js"></script>
+  <title>Picture Verse</title>
+</head>
+
+<body onclick = "toggle()">
+  <audio id = "audioPlayer" visible="false" loop>
+    <source src="instrumental.mp4" type="audio/mpeg">
+  </audio>
+
+  <video id = "videoPlayer" class="animated fadeIn" onclick = "pause()">
+    <source src="video.mp4" type="video/mp4">
+  </video>
+
+  <div id = "verseDiv" class="animated fadeIn"></div>
+  <div id = "referenceDiv" class="animated fadeIn" onclick = 'outloud()'></div>
+</body>
+</html>
