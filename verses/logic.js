@@ -4,8 +4,9 @@ var verses = new Array();
 var references = new Array();
 
 $(document).ready(function() {
-    preloadVerses(1);
-    preloadImages(1);
+    // preloadVerses(1);
+    // preloadImages(1);
+    showNextImage();
     setInterval(function(){
       showNextImage();
     }, 20000);
@@ -86,8 +87,6 @@ function showNextImage(){
     updateScreen();
   });
   // document.getElementById("loadingScreen").style.visibility = "hidden";
-
-
 }
 
 
