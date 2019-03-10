@@ -6,17 +6,26 @@ body{
   background-color: black;
 }
 
-#videoPlayer{
-   width: 150%;
-   height:110%;
+@media only screen and (min-width: 700px) {
+  video#videoPlayer{
+    width: 150%;
+    height: 110%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  video#videoPlayer{
+    width: 170%;
+    position: fixed;
+    bottom: 0;
+    left: -100;
+  }
 }
 
-p.presetVerse{
-  position: fixed;
-  top: 30;
-  left: 35;
-  font-size: 53px;
-  padding: 0px;
-  margin: 0px;
-  color: white;
+img#playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -(X/2)px;
+  margin-top: -(Y/2)px;
+  z-index: 10;
 }

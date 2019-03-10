@@ -1,25 +1,44 @@
 <html>
+
 <head>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="animate.css">
-  <!-- google fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-  <script src="logic.js"></script>
-  <title>Picture Verse</title>
+  <title>A Shadow of a Doubt</title>
+  <link rel="shortcut icon" type="image/png" href="favicon-32x32.png"/>
 </head>
 
-<body onclick = "toggle()">
-  <audio id = "audioPlayer" visible="false" loop>
+<body onclick="toggle()">
+  <img id="playButton" src="play-48.png" alt="test">
+  <audio id="audioPlayer" visible="hidden" loop>
     <source src="instrumental.mp4" type="audio/mpeg">
   </audio>
 
-  <video id = "videoPlayer" class="animated fadeIn" onclick = "pause()">
+  <video id="videoPlayer" class="animated fadeIn">
     <source src="video.mp4" type="video/mp4">
   </video>
-
-  <div id = "verseDiv" class="animated fadeIn"></div>
-  <div id = "referenceDiv" class="animated fadeIn" onclick = 'outloud()'></div>
 </body>
+<script>
+  var audio = window.audioPlayer;
+  var video = window.videoPlayer;
+  var isPlaying = false;
+
+  window.audioPlayer.currentTime = 273;
+  window.audioPlayer.volume = .7;
+
+  function toggle() {
+    window.playButton.classList.add('animated', 'fadeOut');
+    if (isPlaying) {
+      window.playButton.classList.remove('animated', 'fadeOut');
+      window.playButton.classList.add('animated', 'fadeIn');
+      audio.pause();
+      video.pause();
+      isPlaying = false;
+    } else {
+      audio.play();
+      video.play();
+      isPlaying = true;
+    }
+  }
+</script>
+
 </html>
